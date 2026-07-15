@@ -1,0 +1,136 @@
+/* ==========================================================================
+   1. MENGATUR HALAMAN UTAMA (BODY)
+   ========================================================================== */
+
+body {
+  /* Membuat latar belakang menggunakan gradasi warna biru muda ke ungu muda */
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  font-family:
+    "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Font modern tanpa kaki */
+  /* Tiga baris sakti untuk membuat kartu berada tepat di tengah-tengah layar */
+  display: flex;
+  justify-content: center; /* Sentralisasi horizontal (kiri-kanan) */
+  align-items: center; /* Sentralisasi vertikal (atas-bawah) */
+  height: 100vh; /* Mengambil tinggi penuh layar browsermu */
+  margin: 0; /* Menghilangkan jarak bawaan di tepi browser */
+}
+
+/* ==========================================================================
+   2. DESAIN KARTU UTAMA (.card)
+   ========================================================================== */
+.card {
+  background-color: #ffffff; /* Warna dasar kartu putih bersih */
+  padding: 40px 30px; /* Jarak bagian dalam: 40px atas-bawah, 30px kiri-kanan */
+  border-radius: 24px; /* Membuat sudut kartu sangat melengkung dan modern */
+  text-align: center; /* Membuat semua teks & tombol di dalam berada di tengah */
+  width: 320px; /* Mengunci lebar kartu agar tidak terlalu lebar */
+  /* Memberikan efek bayangan yang sangat lembut (soft shadow) agar kartu tampak melayang */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Mengatur teks judul h2 di dalam kartu */
+.card h2 {
+  font-size: 14px; /* Ukuran huruf kecil */
+  letter-spacing: 2px; /* Memberi jarak antar huruf agar terkesan elegan */
+  color: #888888; /* Warna abu-abu redup */
+  margin-bottom: 20px; /* Jarak bawah judul ke tampilan angka */
+}
+
+/* Mengatur teks penjelasan p di dalam kartu */
+.card p {
+  font-size: 14px;
+  color: #666666; /* Warna teks abu-abu sedang agar mudah dibaca */
+  margin-top: 20px; /* Jarak atas dari angka ke teks ini */
+  margin-bottom: 25px; /* Jarak bawah dari teks ini ke tombol */
+}
+
+/* ==========================================================================
+   3. TAMPILAN ANGKA COUNTER (.counter-display)
+   ========================================================================== */
+.counter-display {
+  background-color: #e2e3e4; /* Warna latar belakang abu-abu sangat muda untuk area angka */
+  padding: 15px; /* Ruang bernapas di dalam wadah angka */
+  border-radius: 16px; /* Membuat sudut wadah angka melengkung */
+  margin: 10px 0;
+}
+
+/* Mengatur angka raksasanya */
+#angkaCounter {
+  font-size: 64px; /* Ukuran angka yang sangat besar dan menonjol */
+  font-weight: bold; /* Membuat angka tebal */
+  color: #333333; /* Warna abu-abu gelap mendekati hitam */
+}
+
+/* ==========================================================================
+   4. DESAIN TOMBOL BULAT (#tombolAksi)
+   ========================================================================== */
+#tombolAksi {
+  background-color: #4f46e5; /* Warna ungu indigo yang sangat populer di industri modern */
+  color: #ffffff; /* Warna simbol tambah putih */
+  border: none; /* Menghilangkan border default browser */
+
+  /* Membuat kotak sempurna dengan ukuran lebar dan tinggi yang sama */
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; /* Mengubah kotak sempurna menjadi lingkaran 100% */
+
+  font-size: 32px; /* Ukuran simbol '+' yang proporsional dengan lingkaran 70px */
+
+  /* Menggunakan Flexbox di dalam tombol agar simbol '+' berada tepat di tengah lingkaran */
+  display: inline-flex;
+  justify-content: center; /* Tengah secara horizontal */
+  align-items: center; /* Tengah secara vertikal */
+
+  cursor: pointer; /* Mengubah kursor menjadi tangan menunjuk saat menyentuh tombol */
+
+  /* Efek transisi halus selama 0.2 detik saat tombol berubah warna atau ukuran */
+  transition: all 0.2s ease-in-out;
+
+  /* Memberi sedikit efek bayangan di bawah tombol */
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+/* Efek saat mouse melayang di atas tombol (Hover) */
+#tombolAksi:hover {
+  background-color: #4338ca; /* Warnanya berubah menjadi ungu yang sedikit lebih tua */
+  transform: scale(
+    1.08
+  ); /* Membuat tombol sedikit membesar (efek membal yang interaktif) */
+}
+
+/* Efek saat tombol diklik (Active) */
+#tombolAksi:active {
+  transform: scale(
+    0.95
+  ); /* Membuat tombol sedikit mengecil saat ditekan (seperti tombol fisik) */
+}
+
+/* ==========================================================================
+   5. DESAIN TOMBOL BULAT (#tombolAksiMinus)
+   ========================================================================== */
+
+#tombolAksiMinus {
+  background-color: #6056c9;
+  width: 70px;
+  height: 70px;
+  font-size: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+  margin-left: 5px;
+}
+
+#tombolAksiMinus:hover {
+  background-color: #5b51cd;
+  transform: scale(1.08);
+}
+
+#tombolAksiMinus:active {
+  transform: scale(0.95);
+}

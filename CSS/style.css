@@ -1,0 +1,43 @@
+/* Kita hias kartu agar berada di tengah dan punya warna lembut */
+body {
+  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  /* 1. TENTUKAN UKURAN LEBAR DAN TINGGI YANG SAMA (Kotak Sempurna) */
+  width: 60px;
+  height: 60px;
+
+  /* 2. UBAH KOTAK MENJADI LINGKARAN */
+  border-radius: 50%;
+
+  /* 3. AGAR TEKS DI DALAMNYA PAS DI TENGAH-TENGAH LINGKARAN */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  font-size: 14px; /* Sedikit dikecilkan agar teks muat di dalam lingkaran */
+  transition: background-color 0.3s; /* Efek transisi halus saat disentuh */
+  font-size: 40px; /* Ukuran pas, memberikan ruang bernapas yang cukup */
+}
+
+button:hover {
+  background-color: #0056b3; /* Berubah warna saat disentuh mouse */
+}
